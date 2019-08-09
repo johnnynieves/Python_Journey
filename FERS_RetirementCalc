@@ -1,0 +1,39 @@
+#! /usr/bin/python3
+
+#This Program calculates your TSP annual contributions and gives you a reasonable return of 6% annually over the 
+# number of years you contributed. It also takes into account if you had a starting balance in your TSP. The program
+# also calculates your Federal Employment Retirement (FERS) by taking a couple inputs from you. 
+# 
+# No Warranties or guarantee made.
+
+
+if __name__ == '__main__':
+
+    annual_return = .06
+    years =  int(input('How many years did you contribute to your TSP? > ')) + 1
+    contributions = int(input('How much was your monthly contribution to TSP? > $')) * 12
+    retirement = int(input('How much was your starting TSP balance? > $')) 
+    print (f' This is your annual contributions ${contributions} to your TSP.')
+    
+    for num in range(years):
+        retirement = retirement + contributions + (contributions * annual_return)
+        print(f'Year {num}, This is your estimated summary $ {retirement}')
+    print('~' * 80)
+    print(f'Your total TSP benefits at year {num} is ${retirement}\n')
+    print('~' * 80)
+    disburst = retirement * .04
+    print(f"Your annual TSP savings distributions at 4% is ${disburst}\n")
+    print('~' * 80)
+
+    years_worked = int(input('How many years did you work > '))
+    salary = int(input('What was your highest Salary > $'))
+    annualty = .011 * salary * years_worked
+    print()
+    print('~' * 80)
+    print(f'Your Federal Annuaty is ${annualty} \n')
+    print('~' * 80)
+    print()
+    end = annualty + disburst
+    print(f'Your total combined TSP & FERS annual retirement income will be ${end}')
+    print()
+    print('~' * 80)
