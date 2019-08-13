@@ -608,7 +608,8 @@ class PointClasses: #object is an instance of a class. class is a blue print for
     print(point2.b) # you will get AttributeError: 'PointClasses' object has no attribute 'b'
     
     next 6 line of code shift tab to use class
-    #Constructor gets created at the time you create and object.
+    #Constructor gets created at the time you create and object. Used to construct a new object
+    # with variables passed 
     #how can i pass value to the class like def
     #make def __init__(self,x,y) self must be first and in not just the __init def but all def in class
 
@@ -632,11 +633,35 @@ class Person:
     bob = Person('Bob Smith')
     bob.talk()
 '''
+'''
+#Inheritance  Dont repeat yourself (DRY) if i want to  have another class with the same content of the previous class we can just make it inherate
+#the content and add additional content to the created class.
+class Mammal:
+    def walk(self):
+        print("Walk")
+        
 
-#Inheritance
+class Dog(Mammal): #
+    #pass # python does not like empty classes. Even though it is inheriting from parent the dog class block is still empty so we tell pythong pass this line 
+    def bark(self):
+        print('bark') 
+
+class Cat(Mammal):
+    #pass
+    def meow(self):
+        print('meow')
 
 
-
+josey = Cat()
+josey.walk()
+josey.meow()
+rover = Dog()
+rover.walk()
+rover.bark()
+#Of course if we wanted to print the name we would have to create a __init__ def
+''' #this belongs to the classes sections
+#__________________________________________  
+#modules section
 
 
 
