@@ -660,8 +660,123 @@ rover.walk()
 rover.bark()
 #Of course if we wanted to print the name we would have to create a __init__ def
 ''' #this belongs to the classes sections
-#__________________________________________  
-#modules section
+#__________________________________________
+
+
+
+def modules():
+    '''
+    #modules section
+    #helps us to reuse code
+
+    make a file nameed convertors.py with the following code and then we are going to import
+    it and use it.
+
+    def lbs_to_kg(weight):
+        return weight * .45
+
+
+    def kg_to_lbs(weight):
+        return weight / .45
+
+
+    import converters 
+    #we can also use the from statement to import only one of the functions written in the module
+    from converters import lbs_to_kg
+    #or doing this you won't have to use the module name . method  
+    from converters import kg_to_lbs
+
+    print(converters.kg_to_lbs(70))
+    print(converters.lbs_to_kg(155))
+    '''
+#module exercise
+'''
+made a file called utils.py and import it and use it 
+def find_max():
+    high_num = 0
+    num = [3,6,2,0,1,10,5]
+    for i in num:
+        if i > high_num:
+            high_num = i
+    print(high_num)
+
+
+    import utils
+    print(utils.find_max([5,5,5,10,5,7,9]))
+    #or
+    from utils import find_max
+    num = [4,8,78,6,5]
+    print(find_max(num))
+
+    python already has the function we just did its called max .... lol
+    '''
+#__________________________________________
+
+
+def packages():
+    '''
+    #Packages is another way to organize related files into modules ... directory/folder 
+    example: Mall
+    ______
+    Mall | --> Your program
+    ____|
+    _________________________________________
+    Men's     |      Women's    |   Kid's   | --> This is a package
+    _________|_________________|___________|
+    ________
+    Shoes  | 
+    Shirts | --> all of these are modules in the package
+    jacket |
+    _______|
+    create a new directory call ecommerce which will have all our modules
+    then create a __init__.py file this converts folder to package
+
+    #calling package and function
+    import ecommerce.shipping
+    ecommerce.shipping.calc_shipping() #everytime we have to use this we will have to type aout 
+                                    #All of this. A better approach is the following
+
+    from ecommerce.shipping import calc_shipping 
+    calc_shipping()  # or
+
+    from ecommerce import shipping
+    shipping.calc_shipping()
+    '''
+
+
+def generating_random_values
+
+#build in modules in python
+#google python3 module index
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
