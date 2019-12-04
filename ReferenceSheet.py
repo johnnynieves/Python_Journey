@@ -664,7 +664,7 @@ rover.bark()
 
 
 
-def modules():
+def modules(): 
     '''
     #modules section
     #helps us to reuse code
@@ -744,47 +744,43 @@ def packages():
     '''
 
 
-def generating_random_values
+def generating_random_values():
+    '''
+    class Dice:
+
+        def roll(self):
+            num1 = random.randint(1, 6)
+            num2 = random.randint(1, 6)
+            return num1, num2
+
+
+    cat = Dice()
+
+    for i in range(100):
+        print(cat.roll())
+    '''    
 
 #build in modules in python
 #google python3 module index
 
+def working_with_directories():
+    from pathlib import Path
+    #
+    path = Path('Folder')
+    print(path.exists())
+    path.mkdir()
+    path.rmdir()
+    #search over generator/ file you can see but 
+    #value is in memory and accessible
+    for i in (path.glob('*')):
+        print(i)
 
 
+"PyPi library is an extended library for python use"
+# Example in use openpyxl
+# Install by using pip in the terminal window.
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-'''
-if __name__ == '__main__':
-    #call the function your trying to sample
-    _error_handling()
-'''
+if __name__ == "__main__":
+    generating_random_values()
+    
